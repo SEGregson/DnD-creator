@@ -92,19 +92,19 @@ pub struct Character {
     surv:           Skill,
 }
 
-impl Character {
-    //fn new() -> Character {}
+// impl Character {
+//     //fn new() -> Character {}
 
-    fn skill_check(skill: impl Attribute, adv: Option<bool>) -> i8 {
-        let mut roll = skill.roll();
+//     fn skill_check(skill: impl Attribute, adv: Option<bool>) -> i8 {
+//         let mut roll = skill.roll();
 
-        match adv {
-            Some(adv) => {
+//         match adv {
+//             Some(adv) => {
                 
-            },
-            None => todo!(),
-        }
+//             },
+//             None => todo!(),
+//         }
 
-        return 0
-    }
-}
+//         return 0
+//     }
+// }
