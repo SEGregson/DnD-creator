@@ -1,15 +1,17 @@
 use std::io;
 
-mod backend;
-use backend::stats::roll_d;
+mod Model;
+mod Controller;
+mod View;
 
-mod frontend;
-use crate::frontend::init_ui::init;
+use Model::character_manager::CharacterManager;
+use View::index_view::index;
+
 fn main() -> Result<(), io::Error> {
     
+    let manager = CharacterManager::new();
 
-
-    let ui = init();
+    let ui = index();
 
     ui.join().unwrap();
     Ok(())

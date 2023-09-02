@@ -1,4 +1,4 @@
-use rand::{Rng, random};
+use rand::Rng;
 
 pub fn roll_d(num: u8) -> u8 {
     rand::thread_rng().gen_range(1..num)
