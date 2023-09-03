@@ -1,6 +1,7 @@
 use super::stats::Character;
 
 // later replace with database
+#[derive(Clone)]
 pub struct CharacterManager {
     chars: Vec<Character>
 }
@@ -42,3 +43,4 @@ impl CharacterManager {
         out
     }
 }
+

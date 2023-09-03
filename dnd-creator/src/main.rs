@@ -1,4 +1,4 @@
-use std::io;
+use std::{io, sync::Arc};
 
 mod Model;
 mod Controller;
@@ -9,11 +9,10 @@ use View::index_view::index;
 
 fn main() -> Result<(), io::Error> {
     
-    let manager = CharacterManager::new();
+    let manager = Arc::from(CharacterManager::new());
 
-    let ui = index();
+    index(manager).join().unwrap();
 
-    ui.join().unwrap();
     Ok(())
 }
 
